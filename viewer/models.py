@@ -1,12 +1,13 @@
 from django.db import models
 from django.template.defaultfilters import slugify
 
+
 # Piece model
 # Represents a piece of art in the portfolio collection
 class Piece(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField()
-    created_date = models.DateTimeField()
+    created_date = models.DateField()
 
     # These are the different tabs for viewing the art by type
     CANVAS = 'Canvas'
@@ -37,6 +38,9 @@ class Piece(models.Model):
             self.slug = slugify(self.title)[:50]
         return super(Piece, self).save(*args, **kwargs)
 
+
+# Link model
+# Represents a link for the 'About' and 'Inspiration' pages
 class Link(models.Model):
     title = models.CharField(max_length=200)
     url = models.URLField()

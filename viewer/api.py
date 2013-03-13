@@ -2,7 +2,6 @@ from tastypie import fields
 from tastypie.resources import ModelResource, ALL
 from viewer.models import Piece, Link
 
-
 class PieceResource(ModelResource):
     class Meta:
         queryset = Piece.objects.all()
