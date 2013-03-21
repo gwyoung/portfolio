@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Metadata -->
+        <title>Portfolio</title>
+
+        <!-- Stylesheet -->
+        <!-- <link rel="stylesheet" href="{{STATIC_URL}}css/style.css"> -->
+
+        <!-- Pass constants from the server -->
+        <script>
+            var Server = Server || {};
+            Server.Constants = Server.Constants || {};
+            Server.Constants.PIECE_API = "{% url 'api_dispatch_list' resource_name='piece' api_name='viewer_api' %}";
+        </script>
+
+        <!-- Loads the require bootstrap -->
+        <script data-main="{{ STATIC_URL }}js/main" src="{{ STATIC_URL }}js/libs/require/require.js"></script>
+    </head>
+    <body>
+        <div id="viewer_panel">
+            <div id="type_panel"></div>
+            <div id="banner_top_panel"></div>
+            <div id="content_panel"></div>
+            <div id="banner_bottom_panel"></div>
+            <div id="navigation_panel"></div>
+        </div>
+    </body>
+
+    <script>
+        var c = new Viewer.PieceCollection(null, {});
+        c.fetch({
+            success: function(){
+                alert(c.total);
+            }
+        });
+        var d = new Viewer.PieceCollection(null, {year: 2011});
+        d.fetch({
+            success: function(){
+                alert(d.total);
+            }
+        });
+    </script>
+</html>

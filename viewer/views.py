@@ -1,4 +1,6 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+from django.core.urlresolvers import reverse
+from viewer.models import Piece, Link
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the viewer index.")
+    return render(request, 'viewer/index.html', {})
