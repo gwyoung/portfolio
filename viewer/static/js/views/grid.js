@@ -11,23 +11,22 @@ define([
             // Get all pieces with a specific type, if specified
             var options = {};
             this.collection = new PieceCollection(null, options);
-            this.collection.bind("change", this.render);
-            alert('fetching');
-            this.collection.fetch({
-                success: function(resp){
-                    alert(resp.toJSON());
-                }
-            });
+            // Bind events to collection's reset event
+            _.bindAll(this, 'render');
+            this.collection.bind('reset', this.render, this);
+            // Call fetch with reset = true to trigger the event
+            this.collection.fetch({reset: true});
         },
         render: function(){
-            alert('rendering');
             // Prepare the pieces for the grid template
             // Expects a list of objects of the form {{year: 2011, pieces: [piece objects]}}
+            // Sort models reverse chronologically
+            var models = _.sortBy(this.collection.models, function(piece){ return piece.get('created_date')});
+            models.reverse();
             var piece_sets = [];
-            _.each(_.uniq(_.map(this.collection.models, function(piece){
-                return piece.get('year');
-            })), function(year){
-                var pieces = _.filter(this.collection.models, function(piece){
+            var years = _.uniq(_.map(models, function(piece){ return piece.get('year'); }))
+            _.each(years, function(year){
+                    var pieces = _.filter(models, function(piece){
                     return piece.get('year') == year;
                 });
                 piece_sets.push({year: year, pieces: pieces});

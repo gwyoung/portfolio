@@ -13,7 +13,6 @@ define([
             this.year = options.year;
             this.limit = options.limit;
             this.offset = options.offset;
-            this.fetch();
         },
 
         // Overrides url to add parameters
@@ -46,7 +45,7 @@ define([
             this.hasMore = this.total > this.models.length;
             // Translate year from creation date
             _.each(response.objects, function(piece){
-                piece.year = new Date(piece.created_date).getYear();
+                piece.year = new Date(piece.created_date).getFullYear();
             })
             return response.objects;
         }

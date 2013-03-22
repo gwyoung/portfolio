@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cc17ba3-4bd6-40b4-ae89-f37bae701622" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/viewer/static/js/templates/detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/viewer/static/js/views/detail.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/viewer/static/js/templates/grid.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/viewer/static/js/views/grid.js" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/viewer/static/js/backbone-tastypie.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/static/js/app.js" afterPath="$PROJECT_DIR$/viewer/static/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/templates/viewer/index.html" afterPath="$PROJECT_DIR$/viewer/templates/viewer/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/static/js/main.js" afterPath="$PROJECT_DIR$/viewer/static/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/static/js/models/piece.js" afterPath="$PROJECT_DIR$/viewer/static/js/models/piece.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/static/js/views/grid.js" afterPath="$PROJECT_DIR$/viewer/static/js/views/grid.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/static/js/collections/pieces.js" afterPath="$PROJECT_DIR$/viewer/static/js/collections/pieces.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/static/js/router.js" afterPath="$PROJECT_DIR$/viewer/static/js/router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="portfolio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,13 +18,13 @@
     <file path="/index.html" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363909633189" ignored="false" />
     <file path="/viewer.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363821485887" ignored="false" />
     <file path="/piece.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363826214371" ignored="false" />
-    <file path="/pieces.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363913230247" ignored="false" />
+    <file path="/pieces.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363927494410" ignored="false" />
     <file path="/router.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363913138871" ignored="false" />
     <file path="/main.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363908977357" ignored="false" />
     <file path="/detail.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363900980077" ignored="false" />
     <file path="/grid.html" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363905647091" ignored="false" />
     <file path="/detail.html" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363903523537" ignored="false" />
-    <file path="/grid.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363913637919" ignored="false" />
+    <file path="/grid.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363927909615" ignored="false" />
     <file path="/app.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363911090971" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +63,16 @@
       <file leaf-file-name="grid.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/viewer/static/js/views/grid.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="35" selection-start="566" selection-end="566" vertical-scroll-proportion="0.35828024">
+            <state line="13" column="38" selection-start="481" selection-end="481" vertical-scroll-proportion="0.26273885">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grid.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/viewer/static/js/templates/grid.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="9" selection-start="571" selection-end="571" vertical-scroll-proportion="-8.125">
               <folding />
             </state>
           </provider>
@@ -119,16 +119,7 @@
       <file leaf-file-name="pieces.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viewer/static/js/collections/pieces.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="45" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/viewer/static/js/templates/detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="64" selection-start="613" selection-end="613" vertical-scroll-proportion="-6.25">
+            <state line="27" column="13" selection-start="813" selection-end="813" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -174,14 +165,14 @@
         <option value="$PROJECT_DIR$/viewer/templates/viewer/index.html" />
         <option value="$PROJECT_DIR$/viewer/static/js/main.js" />
         <option value="$PROJECT_DIR$/viewer/static/js/app.js" />
-        <option value="$PROJECT_DIR$/viewer/static/js/collections/pieces.js" />
         <option value="$PROJECT_DIR$/viewer/static/js/router.js" />
+        <option value="$PROJECT_DIR$/viewer/static/js/collections/pieces.js" />
         <option value="$PROJECT_DIR$/viewer/static/js/views/grid.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="431" />
+    <option name="x" value="429" />
     <option name="y" value="33" />
     <option name="width" value="989" />
     <option name="height" value="810" />
@@ -588,7 +579,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="431" y="33" width="989" height="810" extended-state="0" />
+    <frame x="429" y="33" width="989" height="810" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -707,13 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/viewer/static/js/templates/grid.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="9" selection-start="571" selection-end="571" vertical-scroll-proportion="-8.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/viewer/static/js/templates/detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="64" selection-start="613" selection-end="613" vertical-scroll-proportion="-6.25">
@@ -737,13 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/viewer/static/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="3" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/viewer/static/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="3" selection-start="329" selection-end="329" vertical-scroll-proportion="0.0">
@@ -758,6 +735,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/viewer/static/js/templates/grid.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="9" selection-start="571" selection-end="571" vertical-scroll-proportion="-8.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewer/static/js/collections/pieces.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="13" selection-start="813" selection-end="813" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/viewer/static/js/models/piece.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="39" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
@@ -765,9 +756,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/viewer/static/js/collections/pieces.js">
+    <entry file="file://$PROJECT_DIR$/viewer/static/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="45" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0">
+        <state line="32" column="3" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -781,7 +772,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/viewer/static/js/views/grid.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="35" selection-start="566" selection-end="566" vertical-scroll-proportion="0.35828024">
+        <state line="13" column="38" selection-start="481" selection-end="481" vertical-scroll-proportion="0.26273885">
           <folding />
         </state>
       </provider>
