@@ -1,8 +1,7 @@
 define([
     'underscore',
-    'backbone',
-    'backbone_tastypie'
-], function(_, Backbone, Tastypie){
+    'backbone'
+], function(_, Backbone){
     var Piece = Backbone.Model.extend({
         urlRoot: Server.Constants.PIECE_API
     })

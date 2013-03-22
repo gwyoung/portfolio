@@ -1,0 +1,12 @@
+<div class='detail_image_div'>
+    <img class='detail_image_img' src='<%= piece.get("image") %>'
+         alt='<%= piece.get("title") %>'
+         title='<%= piece.get("title") %>' />
+</div>
+<div class='detail_meta_div'>
+    <div class='detail_meta_title_div'><%= piece.get("title") %></div>
+    <div class='detail_meta_date_div'><%= piece.get("created_date") %></div>
+    <div class='detail_meta_size_div'><%= piece.get("width") %>" x <%= piece.get("height") %>"</div>
+    <div class='detail_meta_materials_div'><%= piece.get("materials") %></div>
+    <div class='detail_meta_blurb_div'><%= piece.get("blurb") %></div>
+</div>

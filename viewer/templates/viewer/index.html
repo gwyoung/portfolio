@@ -15,7 +15,7 @@
         </script>
 
         <!-- Loads the require bootstrap -->
-        <script data-main="{{ STATIC_URL }}js/main" src="{{ STATIC_URL }}js/libs/require/require.js"></script>
+        <script data-main="{{ STATIC_URL }}js/main" src="{{ STATIC_URL }}js/libs/require/require-jquery.js"></script>
     </head>
     <body>
         <div id="viewer_panel">
@@ -26,19 +26,4 @@
             <div id="navigation_panel"></div>
         </div>
     </body>
-
-    <script>
-        var c = new Viewer.PieceCollection(null, {});
-        c.fetch({
-            success: function(){
-                alert(c.total);
-            }
-        });
-        var d = new Viewer.PieceCollection(null, {year: 2011});
-        d.fetch({
-            success: function(){
-                alert(d.total);
-            }
-        });
-    </script>
 </html>

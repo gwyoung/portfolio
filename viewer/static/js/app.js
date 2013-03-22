@@ -6,7 +6,7 @@ define([
 ], function($, _, Backbone, Router){
     var initialize = function(){
         // Pass in our Router module and call it's initialize function
-        Router.initialize();
+        this.Router = new Router();
     }
 
     return {

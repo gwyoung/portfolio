@@ -1,10 +1,9 @@
 define([
     'underscore',
     'backbone',
-    'backbone_tastypie',
     // Pull in the Piece model
     'models/piece'
-], function(_, Backbone, Tastypie, Piece){
+], function(_, Backbone, Piece){
     var PieceCollection = Backbone.Collection.extend({
         model: Piece,
 
@@ -14,11 +13,12 @@ define([
             this.year = options.year;
             this.limit = options.limit;
             this.offset = options.offset;
+            this.fetch();
         },
 
         // Overrides url to add parameters
         url: function() {
-            return Piece.urlRoot + '?' + this.params();
+            return Server.Constants.PIECE_API + '?' + this.params();
         },
 
         // Constructs parameters for filtering set
@@ -44,6 +44,10 @@ define([
             this.total = response.meta.total_count;
             this.offset = response.meta.offset + this.limit;
             this.hasMore = this.total > this.models.length;
+            // Translate year from creation date
+            _.each(response.objects, function(piece){
+                piece.year = new Date(piece.created_date).getYear();
+            })
             return response.objects;
         }
     })

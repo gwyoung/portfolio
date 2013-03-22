@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cc17ba3-4bd6-40b4-ae89-f37bae701622" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/viewer/static/js/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/viewer/templates/viewer/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/viewer/static/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/viewer/static/js/models/piece.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/viewer/static/js/collections/pieces.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/viewer/static/js/router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/sqlite.db" afterPath="$PROJECT_DIR$/database/sqlite.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/settings.py" afterPath="$PROJECT_DIR$/portfolio/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/urls.py" afterPath="$PROJECT_DIR$/viewer/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/views.py" afterPath="$PROJECT_DIR$/viewer/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/viewer/static/js/templates/detail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/viewer/static/js/views/detail.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/viewer/static/js/templates/grid.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/viewer/static/js/views/grid.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/viewer/static/js/backbone-tastypie.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/static/js/app.js" afterPath="$PROJECT_DIR$/viewer/static/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/templates/viewer/index.html" afterPath="$PROJECT_DIR$/viewer/templates/viewer/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/static/js/main.js" afterPath="$PROJECT_DIR$/viewer/static/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/static/js/models/piece.js" afterPath="$PROJECT_DIR$/viewer/static/js/models/piece.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/static/js/collections/pieces.js" afterPath="$PROJECT_DIR$/viewer/static/js/collections/pieces.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/static/js/router.js" afterPath="$PROJECT_DIR$/viewer/static/js/router.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="portfolio.iws" />
@@ -24,12 +24,17 @@
     <file path="/views.py" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363818150413" ignored="false" />
     <file path="/api.py" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363138921853" ignored="false" />
     <file path="/admin.py" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363210189900" ignored="false" />
-    <file path="/index.html" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363825170628" ignored="false" />
+    <file path="/index.html" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363909633189" ignored="false" />
     <file path="/viewer.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363821485887" ignored="false" />
     <file path="/piece.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363826214371" ignored="false" />
-    <file path="/pieces.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363826247994" ignored="false" />
-    <file path="/router.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363826326566" ignored="false" />
-    <file path="/main.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363826156039" ignored="false" />
+    <file path="/pieces.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363913230247" ignored="false" />
+    <file path="/router.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363913138871" ignored="false" />
+    <file path="/main.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363908977357" ignored="false" />
+    <file path="/detail.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363900980077" ignored="false" />
+    <file path="/grid.html" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363905647091" ignored="false" />
+    <file path="/detail.html" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363903523537" ignored="false" />
+    <file path="/grid.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363913637919" ignored="false" />
+    <file path="/app.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363911090971" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,10 +51,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/portfolio/settings.py">
+      <file leaf-file-name="router.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/viewer/static/js/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="28" selection-start="4397" selection-end="4397" vertical-scroll-proportion="0.0">
+            <state line="23" column="29" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -58,17 +63,28 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viewer/templates/viewer/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="38" selection-start="406" selection-end="406" vertical-scroll-proportion="-8.125">
+            <state line="23" column="42" selection-start="851" selection-end="851" vertical-scroll-proportion="-14.375">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/viewer/static/js/main.js">
+      <file leaf-file-name="grid.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/viewer/static/js/views/grid.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="3" selection-start="485" selection-end="485" vertical-scroll-proportion="0.0">
+            <state line="15" column="35" selection-start="566" selection-end="566" vertical-scroll-proportion="0.35828024">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="text.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/viewer/static/js/text.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,16 +92,7 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viewer/static/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="3" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="router.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/viewer/static/js/router.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="28" selection-start="138" selection-end="138" vertical-scroll-proportion="0.14040561">
+            <state line="14" column="3" selection-start="329" selection-end="329" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -94,7 +101,16 @@
       <file leaf-file-name="piece.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viewer/static/js/models/piece.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="35" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
+            <state line="4" column="39" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/viewer/static/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="3" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -103,16 +119,25 @@
       <file leaf-file-name="pieces.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viewer/static/js/collections/pieces.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="35" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
+            <state line="20" column="45" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/viewer/admin.py">
+      <file leaf-file-name="detail.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/viewer/static/js/templates/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="25" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0">
+            <state line="10" column="64" selection-start="613" selection-end="613" vertical-scroll-proportion="-6.25">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detail.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/viewer/static/js/views/detail.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="3" selection-start="760" selection-end="760" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -136,28 +161,28 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/portfolio/urls.py" />
-        <option value="$PROJECT_DIR$/viewer/models.py" />
-        <option value="$PROJECT_DIR$/viewer/admin.py" />
-        <option value="$PROJECT_DIR$/viewer/urls.py" />
-        <option value="$PROJECT_DIR$/portfolio/settings.py" />
         <option value="$PROJECT_DIR$/static/js/backbone-tastypie.js" />
         <option value="$PROJECT_DIR$/portfolio/templates/portfolio/index.html" />
         <option value="$PROJECT_DIR$/static/js/viewer.js" />
         <option value="$PROJECT_DIR$/viewer/views.py" />
         <option value="$PROJECT_DIR$/viewer/static/js/viewer.js" />
-        <option value="$PROJECT_DIR$/viewer/static/js/app.js" />
+        <option value="$PROJECT_DIR$/viewer/static/js/views/thumb.js" />
+        <option value="$PROJECT_DIR$/viewer/static/js/views/detail.js" />
+        <option value="$PROJECT_DIR$/viewer/static/templates/detail.html" />
+        <option value="$PROJECT_DIR$/viewer/static/templates/grid.html" />
+        <option value="$PROJECT_DIR$/viewer/static/js/models/piece.js" />
         <option value="$PROJECT_DIR$/viewer/templates/viewer/index.html" />
         <option value="$PROJECT_DIR$/viewer/static/js/main.js" />
-        <option value="$PROJECT_DIR$/viewer/static/js/models/piece.js" />
+        <option value="$PROJECT_DIR$/viewer/static/js/app.js" />
         <option value="$PROJECT_DIR$/viewer/static/js/collections/pieces.js" />
         <option value="$PROJECT_DIR$/viewer/static/js/router.js" />
+        <option value="$PROJECT_DIR$/viewer/static/js/views/grid.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="434" />
-    <option name="y" value="24" />
+    <option name="x" value="431" />
+    <option name="y" value="33" />
     <option name="width" value="989" />
     <option name="height" value="810" />
   </component>
@@ -259,6 +284,10 @@
               <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -279,6 +308,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="viewer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -344,6 +403,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="viewer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="portfolio" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -372,6 +449,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/viewer/static/js" />
       <recent name="$PROJECT_DIR$/viewer" />
       <recent name="$PROJECT_DIR$/viewer/templates/viewer" />
     </key>
@@ -510,7 +588,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="434" y="24" width="989" height="810" extended-state="0" />
+    <frame x="431" y="33" width="989" height="810" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -588,34 +666,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/viewer/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="25" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewer/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="25" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewer/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="59" selection-start="1376" selection-end="1376" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewer/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="9" selection-start="444" selection-end="444" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/viewer/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="1" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0">
@@ -641,13 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/viewer/templates/viewer/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="38" selection-start="406" selection-end="406" vertical-scroll-proportion="-8.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/portfolio/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="119" column="28" selection-start="4397" selection-end="4397" vertical-scroll-proportion="0.0">
@@ -655,37 +698,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/viewer/static/js/models/piece.js">
+    <entry file="file://$PROJECT_DIR$/viewer/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="35" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewer/static/js/templates/grid.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="9" selection-start="571" selection-end="571" vertical-scroll-proportion="-8.125">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/viewer/static/js/collections/pieces.js">
+    <entry file="file://$PROJECT_DIR$/viewer/static/js/templates/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="35" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
+        <state line="10" column="64" selection-start="613" selection-end="613" vertical-scroll-proportion="-6.25">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/viewer/static/js/app.js">
+    <entry file="file://$PROJECT_DIR$/viewer/static/js/text.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="3" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewer/static/js/views/detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="3" selection-start="760" selection-end="760" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/viewer/static/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="3" selection-start="485" selection-end="485" vertical-scroll-proportion="0.0">
+        <state line="32" column="3" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewer/static/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="3" selection-start="329" selection-end="329" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewer/templates/viewer/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="42" selection-start="851" selection-end="851" vertical-scroll-proportion="-14.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewer/static/js/models/piece.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="39" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewer/static/js/collections/pieces.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="45" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/viewer/static/js/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="28" selection-start="138" selection-end="138" vertical-scroll-proportion="0.14040561">
+        <state line="23" column="29" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewer/static/js/views/grid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="35" selection-start="566" selection-end="566" vertical-scroll-proportion="0.35828024">
           <folding />
         </state>
       </provider>

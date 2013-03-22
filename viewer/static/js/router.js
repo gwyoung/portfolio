@@ -1,47 +1,37 @@
 define([
     'jquery',
     'underscore',
-    'backbone'
-    //'views/projects/list',
-    //'views/users/list'
-], function($, _, Backbone){
-    /*
-    var AppRouter = Backbone.Router.extend({
+    'backbone',
+    'views/grid'
+], function($, _, Backbone, GridView){
+
+    var Router = Backbone.Router.extend({
         routes: {
             // Define some URL routes
-            '/projects': 'showProjects',
-            '/users': 'showUsers',
+            'work': 'showGrid',
+            'work/:type': 'showGridByType',
+            'work/detail/:id': 'showDetail',
+            'about': 'showAbout',
+            'contact': 'showContact',
+            'inspiration': 'showInspiration',
 
             // Default
             '*actions': 'defaultAction'
+        },
+        initialize: function(){
+            Backbone.history.start();
+        },
+        showGrid: function(){
+            var gridView = new GridView();
+        },
+        showGridByType: function(type){
+            alert('grid view');
+            var gridView = new GridView();
+        },
+        defaultAction: function(actions){
+            alert(actions);
         }
     });
-    */
 
-    var initialize = function(){
-        /*
-        var app_router = new AppRouter;
-        app_router.on('showProjects', function(){
-            // Call render on the module we loaded in via the dependency array
-            // 'views/projects/list'
-            var projectListView = new ProjectListView();
-            projectListView.render();
-        });
-        // As above, call render on our loaded module
-        // 'views/users/list'
-        app_router.on('showUsers', function(){
-            var userListView = new UserListView();
-            userListView.render();
-        });
-        app_router.on('defaultAction', function(actions){
-            // We have no matching route, lets just log what the URL was
-            console.log('No route:', actions);
-        });
-        Backbone.history.start();
-        */
-    };
-
-    return {
-        initialize: initialize
-    };
+    return Router;
 });
