@@ -1,3 +1,9 @@
+/*
+#content_panel view
+The view for displaying a grid of piece thumbnails. Each thumbnail is clickable into the
+detail view for that piece.
+ */
+
 define([
     'jquery',
     'underscore',
@@ -8,11 +14,9 @@ define([
     var GridView = Backbone.View.extend({
         el: $('#content_panel'),
         initialize: function() {
-            // Get all pieces with a specific type, if specified
-            var options = {};
-            this.collection = new PieceCollection(null, options);
+            // Get all pieces, passing options to the collection
+            this.collection = new PieceCollection(null, this.options);
             // Bind events to collection's reset event
-            _.bindAll(this, 'render');
             this.collection.bind('reset', this.render, this);
             // Call fetch with reset = true to trigger the event
             this.collection.fetch({reset: true});

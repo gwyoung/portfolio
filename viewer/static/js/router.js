@@ -2,8 +2,9 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'views/grid'
-], function($, _, Backbone, GridView){
+    'views/grid',
+    'views/detail'
+], function($, _, Backbone, GridView, DetailView){
 
     var Router = Backbone.Router.extend({
         routes: {
@@ -25,11 +26,12 @@ define([
             var gridView = new GridView();
         },
         showGridByType: function(type){
-            alert('grid view');
-            var gridView = new GridView();
+            var gridView = new GridView({type: type});
+        },
+        showDetail: function(id){
+            var detailView = new DetailView({id: id});
         },
         defaultAction: function(actions){
-            alert(actions);
         }
     });
 
