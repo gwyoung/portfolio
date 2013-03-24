@@ -20,11 +20,11 @@ define([
             // Set the current page in the singletons object
             Singletons.CurrentPage = this.options.title;
             // Bind events to collection's reset event
-            this.collection.bind('reset', this.links, this);
+            this.collection.bind('reset', this.getLinks, this);
             // Call fetch with reset = true to trigger the event
             this.collection.fetch({reset: true});
         },
-        links: function(){
+        getLinks: function(){
             // Retrieve all the links for the current page
             this.flat_page = this.collection.models[0];
             var id = this.flat_page.get('id');

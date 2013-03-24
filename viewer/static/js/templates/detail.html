@@ -1,3 +1,8 @@
+<% if(prevPiece){ %>
+    <div class='<%= prevClass %>' <%= uriAttr %>='<%= prevPiece.get('id') %>/<%= prevPiece.get('slug') %>'>
+        Previous
+    </div>
+<% } %>
 <div class='detail_image_div'>
     <img class='detail_image_img' src='<%= piece.get("image") %>'
          alt='<%= piece.get("title") %>'
@@ -10,3 +15,9 @@
     <div class='detail_meta_materials_div'><%= piece.get("materials") %></div>
     <div class='detail_meta_blurb_div'><%= piece.get("blurb") %></div>
 </div>
+<% if(nextPiece){ %>
+    <div class='<%= nextClass %>' <%= uriAttr %>='<%= nextPiece.get('id') %>/<%= nextPiece.get('slug') %>'>
+        Next
+    </div>
+<% } %>
+
