@@ -11,7 +11,13 @@
         <script>
             var Server = Server || {};
             Server.Constants = Server.Constants || {};
+            // Get the api url from the dispatch list
             Server.Constants.PIECE_API = "{% url 'api_dispatch_list' resource_name='piece' api_name='viewer_api' %}";
+            Server.Constants.FLATPAGE_API = "{% url 'api_dispatch_list' resource_name='flatpage' api_name='viewer_api' %}";
+            Server.Constants.LINK_API = "{% url 'api_dispatch_list' resource_name='link' api_name='viewer_api' %}";
+            // Pass the available work types for the navigation bar
+            // Turn autoescape off to avoid automatic encoding of quotes
+            Server.Constants.WORK_TYPES = ["{% autoescape off %}{{ types }}{% endautoescape %}"];
         </script>
 
         <!-- Loads the require bootstrap -->
@@ -19,11 +25,17 @@
     </head>
     <body>
         <div id="viewer_panel">
-            <div id="type_panel"></div>
+            <div id="header_panel">
+                <div id="type_navigation_panel"></div>
+                <div id="logo_panel"></div>
+            </div>
             <div id="banner_top_panel"></div>
             <div id="content_panel"></div>
             <div id="banner_bottom_panel"></div>
-            <div id="navigation_panel"></div>
+            <div id="footer_panel">
+                <div id="page_navigation_panel"></div>
+                <div id="copyright_panel"></div>
+            </div>
         </div>
     </body>
 </html>

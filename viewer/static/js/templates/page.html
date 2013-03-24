@@ -1,0 +1,10 @@
+<div class='page_content_div'><%= content %></div>
+<div class='page_links_div'>
+    <ul>
+        <% _.each(links, function(link){ %>
+            <li class='link_li'>
+                <a href="<%= link.get('url') %>"><%= link.get('title') %></a>
+            </li>
+        <% }); %>
+    </ul>
+</div>

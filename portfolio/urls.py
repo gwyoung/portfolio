@@ -2,7 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.conf import settings
 from django.conf.urls.static import static
 from tastypie.api import Api
-from viewer.api import PieceResource, LinkResource
+from viewer.api import PieceResource, FlatPageResource, LinkResource
 from django.contrib import admin
 
 admin.autodiscover()
@@ -10,6 +10,7 @@ admin.autodiscover()
 # Set up the tastypie API
 viewer_api = Api(api_name='viewer_api')
 viewer_api.register(PieceResource())
+viewer_api.register(FlatPageResource())
 viewer_api.register(LinkResource())
 
 urlpatterns = patterns('',

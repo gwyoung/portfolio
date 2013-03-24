@@ -1,0 +1,3 @@
+<% _.each(links, function(link){ %>
+    <div class='<%= link_class %>' <%= uri_attr %>='<%= link.uri %>'><%= link.title %></div>
+<% }); %>

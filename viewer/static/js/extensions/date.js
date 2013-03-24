@@ -23,10 +23,10 @@ define([
         }
     };
 
-    Date.prototype.getDayOrdinal = function() {
+    Date.prototype.getDateOrdinal = function() {
         var s = ["th","st","nd","rd"],
-            v = this.getDay() % 100;
-        return this.getDay() + (s[(v-20)%10]||s[v]||s[0]);
+            v = this.getDate() % 100;
+        return this.getDate() + (s[(v-20)%10]||s[v]||s[0]);
     }
 
     return Date;

@@ -1,9 +1,12 @@
+/*
+The collection for Pieces. Can be filtered by year, type
+ */
 define([
+    'jquery',
     'underscore',
     'backbone',
-    // Pull in the Piece model
     'models/piece'
-], function(_, Backbone, Piece){
+], function($, _, Backbone, Piece){
     var PieceCollection = Backbone.Collection.extend({
         model: Piece,
 
@@ -38,19 +41,19 @@ define([
             return $.param(p);
         },
 
-        // Parses result and handles pagination through data
+        // Parses, sorts, and formats result
         parse: function(response){
-            this.total = response.meta.total_count;
-            this.offset = response.meta.offset + this.limit;
-            this.hasMore = this.total > this.models.length;
             // Translate year from creation date
             _.each(response.objects, function(piece){
                 piece.year = new Date(piece.created_date).getFullYear();
-            })
-            return response.objects;
+            });
+            // Sort the objects
+            var sorted_objects = _.sortBy(response.objects, 'created_date');
+            sorted_objects.reverse();
+            // Return the sorted objects to be translated into models
+            return sorted_objects;
         }
     })
 
-    // You don't usually return a collection instantiated
     return PieceCollection;
 });

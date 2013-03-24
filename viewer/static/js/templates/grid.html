@@ -1,9 +1,9 @@
 <% _.each(piece_sets, function(piece_set){ %>
     <div class='grid_year_div'>
         <div class='grid_year_title_div'><%= piece_set.year %></div>
-        <div class='grid_year_thumbs_div'>
+        <div class='grid_thumbs_div'>
             <% _.each(piece_set.pieces, function(piece){ %>
-                <div class='grid_thumb_div'>
+                <div class='<%= thumb_class %>' <%= uri_attr %>='<%= piece.get("id") %>/<%= piece.get("slug") %>'>
                     <img class='grid_thumb_img' src='<%= piece.get("thumb") %>'
                         alt='<%= piece.get("title") %>'
                         title='<%= piece.get("title") %>'/>

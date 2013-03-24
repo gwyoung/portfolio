@@ -2,11 +2,11 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'router' // Request router.js
-], function($, _, Backbone, Router){
+    'router', // Request router.js
+    'singletons'
+], function($, _, Backbone, Router, Singletons){
     var initialize = function(){
-        // Pass in our Router module and call it's initialize function
-        this.Router = new Router();
+        Singletons.Router = new Router();
     }
 
     return {

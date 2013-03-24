@@ -38,21 +38,22 @@ class Piece(models.Model):
             self.slug = slugify(self.title)[:50]
         return super(Piece, self).save(*args, **kwargs)
 
+# Flat page model
+# Represents a page with static content and several links
+class FlatPage(models.Model):
+    title = models.CharField(max_length=20)
+    content = models.TextField()
+
+    def __unicode__(self):
+        return self.title
 
 # Link model
-# Represents a link for the 'About' and 'Inspiration' pages
+# Represents a link on a flat page
 class Link(models.Model):
+    flat_page = models.ForeignKey(FlatPage)
     title = models.CharField(max_length=200)
     url = models.URLField()
     description = models.TextField(blank=True)
 
-    # These are the types of links
-    # Personal links are shown on the about page
-    # Inspiration links are shown on the Inspiration page
-    PERSONAL = 'Personal'
-    INSPIRATION = 'Inspiration'
-    TYPE_CHOICES = (
-        (PERSONAL, PERSONAL),
-        (INSPIRATION, INSPIRATION),
-    )
-    type = models.CharField(max_length=20, choices=TYPE_CHOICES, default=INSPIRATION)
+    def __unicode__(self):
+        return self.title
