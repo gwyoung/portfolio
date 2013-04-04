@@ -53,11 +53,11 @@ define([
                 + date.getFullYear();
 
             // Compile the template and render the content div
-            var prevClass = 'detail_prev_div';
-            var nextClass = 'detail_next_div';
+            var prevClass = 'detail_prev_img';
+            var nextClass = 'detail_next_img';
             var uriAttr = 'data-uri';
             this.$el.html(_.template(DetailTemplate, {piece: piece, date: formatted_date,
-                prevPiece: prevPiece, nextPiece: nextPiece,
+                images: Server.Constants.Images, prevPiece: prevPiece, nextPiece: nextPiece,
                 prevClass: prevClass, nextClass: nextClass, uriAttr: uriAttr}));
 
             // Set up previous and next click events

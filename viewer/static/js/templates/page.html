@@ -1,4 +1,5 @@
-<div class='page_content_div'><%= content %></div>
+<div class='page_title_div'><%= page.get('title') %></div>
+<div class='page_content_div'><%= page.get('content') %></div>
 <div class='page_links_div'>
     <ul>
         <% _.each(links, function(link){ %>

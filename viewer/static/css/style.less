@@ -1,0 +1,230 @@
+/* Constants */
+@total_width: 980px;
+@page_width: .95 * @total_width;
+@side_padding: 20px;
+@content_width: @page_width - 2 * @side_padding;
+@hover_color: #e1fcf5;
+@text_color: #003366;
+@text_highlight: #125ae6;
+
+/* Generic mix-ins */
+
+/* Floats and pads inner content of a div */
+.float_with_padding(@content_width, @padding: 0px){
+  float: left;
+  width: @content_width + 2 * @padding;
+  padding-left: @padding;
+  padding-right: @padding;
+}
+
+/* Centers a div inside another div */
+.center(@width){
+  margin: auto;
+  width: @width;
+  position: relative;
+}
+
+/* Clickable regions */
+.clickable(){
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+/* Links in top or bottom navigation */
+.navigation_link(){
+  .clickable;
+  &:hover{
+    color: @text_highlight;
+  }
+}
+
+/* Treat images as blocks */
+img{
+  display: block;
+}
+
+/* viewer_panel (top-level) */
+#viewer_panel{
+  .center(@page_width);
+  color: @text_color;
+  font-family: "Arial", sans-serif;
+
+  #header_panel{
+    @header_width: @content_width;
+    .center(@header_width);
+    @navigation_width: .7 * @header_width;
+
+    #type_navigation_panel{
+      .float_with_padding(@navigation_width);
+      display: table;
+
+      /* type navigation view/template */
+      .navigation_link_div{
+        display: table-cell;
+        float: left;
+        padding-right: 20px;
+        .navigation_link;
+      }
+
+      .selected_link_div{
+        font-weight: bold;
+      }
+    }
+
+    #logo_panel{
+      .float_with_padding(@header_width - @navigation_width);
+    }
+  }
+
+  #banner_top_panel{
+  }
+
+  #content_panel{
+    .float_with_padding(@page_width);
+    padding-bottom:15px;
+
+    /* grid view/template */
+    .grid_year_div{
+      .center(@content_width);
+      padding-top: 20px;
+
+      .grid_year_title_div{
+        font-size: 120%;
+        font-weight: bold;
+      }
+
+      .grid_thumbs_div{
+        display: table;
+
+        .grid_thumb_div{
+          @thumb_size: 120px;
+          @image_padding: 5px;
+          .float_with_padding(@thumb_size, @image_padding);
+          padding-top: @image_padding;
+          padding-bottom: @image_padding;
+          .clickable;
+          &:hover{
+            background: @hover_color;
+          }
+          display: table-cell;
+
+          .grid_thumb_img{
+            width: @thumb_size;
+            height: @thumb_size;
+          }
+        }
+      }
+    }
+
+    /* detail view/template */
+    @button_padding: 2px;
+    @button_width: @side_padding - 2 * @button_padding;
+
+    .detail_nav_img(){
+      width: @button_width;
+      height: @button_width;
+      .clickable;
+    }
+
+    .detail_prev_div{
+      .float_with_padding(@button_width, @button_padding);
+
+      .detail_prev_img{
+        .detail_nav_img;
+      }
+    }
+
+    .detail_next_div{
+      .float_with_padding(@button_width, @button_padding);
+
+      .detail_next_img{
+        .detail_nav_img;
+      }
+    }
+
+    @image_width: .75 * @content_width;
+
+    .detail_image_div{
+      .float_with_padding(@image_width);
+
+      .detail_image_img{
+        width: @image_width;
+      }
+    }
+
+    .detail_meta_div{
+      @right_padding: 10px;
+      .float_with_padding(@content_width - @image_width - @right_padding);
+      text-align: right;
+      padding-right: @right_padding;
+
+      @text_padding: 2px;
+
+      .detail_meta_title_div{
+        font-weight: bold;
+        font-size: 120%;
+        padding: @text_padding;
+      }
+      .detail_meta_date_div{
+        font-style: italic;
+        padding: @text_padding;
+      }
+      .detail_meta_size_div{
+        padding: @text_padding;
+      }
+      .detail_meta_materials_div{
+        padding: @text_padding;
+      }
+      .detail_meta_blurb_div{
+        padding: @text_padding;
+        font-size: 90%;
+      }
+    }
+
+    /* page view/template */
+    .page_title_div{
+
+    }
+    .page_content_div{
+
+    }
+    .page_links_div{
+      .link_li{
+
+      }
+    }
+  }
+
+  #banner_bottom_panel{
+  }
+
+  #footer_panel{
+    .center(@content_width);
+    @navigation_width: .8 * @content_width;
+
+    #copyright_panel{
+      .float_with_padding(@content_width - @navigation_width);
+      float: right;
+    }
+
+    #page_navigation_panel{
+      .float_with_padding(@navigation_width);
+      float: right;
+      display: table;
+
+      /* page navigation view/template */
+      .page_link_div{
+        display: table-cell;
+        float: right;
+        padding-right: 20px;
+        .navigation_link;
+      }
+
+      .selected_link_div{
+        font-weight: bold;
+      }
+    }
+  }
+}
+

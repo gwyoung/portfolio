@@ -36,9 +36,8 @@ define([
         },
         render: function(){
             // Compile the template and render the content div
-            var content = this.flat_page.get('content');
             var links = this.linkCollection.models;
-            this.$el.html(_.template(PageTemplate, {content: content, links: links}));
+            this.$el.html(_.template(PageTemplate, {page: this.flat_page, links: links}));
         }
     })
 

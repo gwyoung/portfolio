@@ -33,9 +33,9 @@ define([
             // Expects a list of objects of the form {{year: 2011, pieces: [piece objects]}}
             var models = this.collection.models;
             var piece_sets = [];
-            var years = _.uniq(_.map(models, function(piece){ return piece.get('year'); }))
+            var years = _.uniq(_.map(models, function(piece){ return piece.get('year'); }));
             _.each(years, function(year){
-                    var pieces = _.filter(models, function(piece){
+                var pieces = _.filter(models, function(piece){
                     return piece.get('year') == year;
                 });
                 piece_sets.push({year: year, pieces: pieces});
