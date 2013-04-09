@@ -12,7 +12,7 @@
 /* Floats and pads inner content of a div */
 .float_with_padding(@content_width, @padding: 0px){
   float: left;
-  width: @content_width + 2 * @padding;
+  width: @content_width;
   padding-left: @padding;
   padding-right: @padding;
 }
@@ -42,10 +42,16 @@
 /* Treat images as blocks */
 img{
   display: block;
+  overflow: hidden;
+}
+
+#body_div{
+  background-color: @text_color;
 }
 
 /* viewer_panel (top-level) */
 #viewer_panel{
+  background-color: #ffffff;
   .center(@page_width);
   color: @text_color;
   font-family: "Arial", sans-serif;
@@ -82,6 +88,7 @@ img{
 
   #content_panel{
     .float_with_padding(@page_width);
+    padding-top:10px;
     padding-bottom:15px;
 
     /* grid view/template */
@@ -107,7 +114,6 @@ img{
           &:hover{
             background: @hover_color;
           }
-          display: table-cell;
 
           .grid_thumb_img{
             width: @thumb_size;
@@ -143,13 +149,17 @@ img{
       }
     }
 
-    @image_width: .75 * @content_width;
+    @image_width: .70 * @content_width;
 
     .detail_image_div{
       .float_with_padding(@image_width);
 
-      .detail_image_img{
+      .horizontal_detail_image_img{
         width: @image_width;
+      }
+
+      .vertical_detail_image_img{
+        height: @image_width;
       }
     }
 
@@ -178,6 +188,7 @@ img{
       }
       .detail_meta_blurb_div{
         padding: @text_padding;
+        padding-top: 10px;
         font-size: 90%;
       }
     }

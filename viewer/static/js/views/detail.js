@@ -63,16 +63,25 @@ define([
             // Set up previous and next click events
             if(prevPiece)
             {
-                $('.' + prevClass).click(function() {
-                    Singletons.Router.navigate('work/detail/' + $(this).attr(uriAttr), true);
-                })
+                this.setUpEvents(prevClass, Server.Constants.Images.PREVIOUS_HOVER,
+                    Server.Constants.Images.PREVIOUS, uriAttr);
             }
             if(nextPiece)
             {
-                $('.' + nextClass).click(function() {
-                    Singletons.Router.navigate('work/detail/' + $(this).attr(uriAttr), true);
-                })
+                this.setUpEvents(nextClass, Server.Constants.Images.NEXT_HOVER,
+                    Server.Constants.Images.NEXT, uriAttr);
             }
+        },
+        setUpEvents: function(cssClass, hoverImg, img, uriAttr){
+            // Set up click and hover events
+            $('.' + cssClass).click(function(){
+                Singletons.Router.navigate('work/detail/' + $(this).attr(uriAttr), true);
+            }).hover(function() {
+                $(this).attr('src', hoverImg);
+            },
+            function(){
+                $(this).attr('src', img);
+            });
         }
     })
 

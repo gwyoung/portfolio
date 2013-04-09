@@ -25,6 +25,8 @@
             Server.Constants.Images = Server.Constants.Images || {};
             Server.Constants.Images.PREVIOUS = "{{ STATIC_URL }}images/left_arrow.jpg";
             Server.Constants.Images.NEXT = "{{ STATIC_URL }}images/right_arrow.jpg";
+            Server.Constants.Images.PREVIOUS_HOVER = "{{ STATIC_URL }}images/left_arrow_highlight.jpg";
+            Server.Constants.Images.NEXT_HOVER = "{{ STATIC_URL }}images/right_arrow_highlight.jpg";
         </script>
 
         <!-- Stylesheet -->
@@ -35,17 +37,19 @@
         <script data-main="{{ STATIC_URL }}js/main" src="{{ STATIC_URL }}js/libs/require/require-jquery.js"></script>
     </head>
     <body>
-        <div id="viewer_panel">
-            <div id="header_panel">
-                <div id="type_navigation_panel"></div>
-                <div id="logo_panel"></div>
-            </div>
-            <div id="banner_top_panel"></div>
-            <div id="content_panel"></div>
-            <div id="banner_bottom_panel"></div>
-            <div id="footer_panel">
-                <div id="page_navigation_panel"></div>
-                <div id="copyright_panel"></div>
+        <div id="body_div">
+            <div id="viewer_panel">
+                <div id="header_panel">
+                    <div id="type_navigation_panel"></div>
+                    <div id="logo_panel"></div>
+                </div>
+                <div id="banner_top_panel"></div>
+                <div id="content_panel"></div>
+                <div id="banner_bottom_panel"></div>
+                <div id="footer_panel">
+                    <div id="page_navigation_panel"></div>
+                    <div id="copyright_panel"></div>
+                </div>
             </div>
         </div>
     </body>

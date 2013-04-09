@@ -4,7 +4,8 @@
     <% } %>
 </div>
 <div class='detail_image_div'>
-    <img class='detail_image_img' src='<%= piece.get("image") %>'
+    <img class='<%= piece.isHorizontal() ? "horizontal" : "vertical" %>_detail_image_img'
+         src='<%= piece.get("image") %>'
          alt='<%= piece.get("title") %>'
          title='<%= piece.get("title") %>' />
 </div>
