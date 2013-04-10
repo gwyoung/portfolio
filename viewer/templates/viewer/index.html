@@ -37,19 +37,28 @@
         <script data-main="{{ STATIC_URL }}js/main" src="{{ STATIC_URL }}js/libs/require/require-jquery.js"></script>
     </head>
     <body>
-        <div id="body_div">
-            <div id="viewer_panel">
-                <div id="header_panel">
-                    <div id="type_navigation_panel"></div>
-                    <div id="logo_panel"></div>
+        <div id="viewer_panel">
+            <div id="header_panel">
+                <div id="banner_panel">
+                    <img class="banner_img" src="{{ STATIC_URL }}images/banner.jpg">
                 </div>
-                <div id="banner_top_panel"></div>
-                <div id="content_panel"></div>
-                <div id="banner_bottom_panel"></div>
-                <div id="footer_panel">
-                    <div id="page_navigation_panel"></div>
-                    <div id="copyright_panel"></div>
+                <div id="type_navigation_panel"></div>
+                <div id="logo_panel">
+                    <img class="logo_img" src="{{ STATIC_URL }}images/logo.jpg">
                 </div>
+            </div>
+            <div id="bar_top_panel">
+                <img class="bar_img" src="{{ STATIC_URL }}images/bar.jpg">
+            </div>
+            <div id="content_panel"></div>
+            <div id="bar_bottom_panel">
+                <img class="bar_img" src="{{ STATIC_URL }}images/bar.jpg">
+            </div>
+            <div id="footer_panel">
+                <div id="copyright_panel">
+                    <img class="copyright_img" src="{{ STATIC_URL }}images/copyright.jpg">
+                </div>
+                <div id="page_navigation_panel"></div>
             </div>
         </div>
     </body>

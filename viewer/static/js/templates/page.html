@@ -1,11 +1,18 @@
-<div class='page_title_div'><%= page.get('title') %></div>
-<div class='page_content_div'><%= page.get('content') %></div>
-<div class='page_links_div'>
-    <ul>
-        <% _.each(links, function(link){ %>
-            <li class='link_li'>
-                <a href="<%= link.get('url') %>"><%= link.get('title') %></a>
-            </li>
-        <% }); %>
-    </ul>
+<div class='page_text_div'>
+    <div class='page_title_div'><%= page.get('title') %></div>
+    <div class='page_content_div'><%= page.get('content') %></div>
+    <div class='page_links_div'>
+        <ul>
+            <% _.each(links, function(link){ %>
+                <li class='link_li'>
+                    <a href="<%= link.get('url') %>"><%= link.get('title') %></a>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</div>
+<div class='page_image_div'>
+    <img class='page_image_img' src='<%= page.get("image") %>'
+            alt='<%= page.get("caption") %>'
+            title='<%= page.get("caption") %>'/>
 </div>

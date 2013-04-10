@@ -3,11 +3,24 @@
 @page_width: .95 * @total_width;
 @side_padding: 20px;
 @content_width: @page_width - 2 * @side_padding;
-@hover_color: #e1fcf5;
-@text_color: #003366;
-@text_highlight: #125ae6;
+@vertical_padding: 20px;
+
+/* Colors */
+@hover_color: #ddfeec;
+@text_color: #4e6881;
+@text_highlight: #6fa7ef;
+
+/* Text */
+@heading_size: 120%;
+@blurb_size: 90%;
 
 /* Generic mix-ins */
+
+/* Used for header text of titles, year labels, etc. */
+.header_text(){
+  font-size: @heading_size;
+  font-weight: bold;
+}
 
 /* Floats and pads inner content of a div */
 .float_with_padding(@content_width, @padding: 0px){
@@ -42,11 +55,6 @@
 /* Treat images as blocks */
 img{
   display: block;
-  overflow: hidden;
-}
-
-#body_div{
-  background-color: @text_color;
 }
 
 /* viewer_panel (top-level) */
@@ -59,17 +67,39 @@ img{
   #header_panel{
     @header_width: @content_width;
     .center(@header_width);
-    @navigation_width: .7 * @header_width;
+    @navigation_width: .55 * @header_width;
+    // Set the height because contents will need to have absolute positioning
+    height: 140px;
+
+    #banner_panel{
+      @right_padding: 5px;
+      width: @navigation_width - @right_padding;
+      padding-right: @right_padding;
+      padding-top: 25px;
+      // Hug the top of the outer div
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      .banner_img{
+        .float_with_padding(@navigation_width - @right_padding);
+      }
+    }
 
     #type_navigation_panel{
-      .float_with_padding(@navigation_width);
+      width: @navigation_width;
       display: table;
+      // Set absolute position to hug the bottom of the container
+      position: absolute;
+      bottom: 0;
+      left: 0;
 
       /* type navigation view/template */
       .navigation_link_div{
         display: table-cell;
         float: left;
         padding-right: 20px;
+        padding-bottom: 5px;
         .navigation_link;
       }
 
@@ -79,34 +109,44 @@ img{
     }
 
     #logo_panel{
-      .float_with_padding(@header_width - @navigation_width);
+      width: @header_width - @navigation_width;
+      // Set absolute position to hug the bottom of the container
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      .logo_img{
+        .float_with_padding(@header_width - @navigation_width);
+      }
     }
   }
 
-  #banner_top_panel{
+  #bar_top_panel{
+    .bar_img{
+      width: @page_width;
+    }
   }
 
   #content_panel{
     .float_with_padding(@page_width);
-    padding-top:10px;
-    padding-bottom:15px;
+    padding-top: @vertical_padding;
 
     /* grid view/template */
     .grid_year_div{
       .center(@content_width);
-      padding-top: 20px;
+      padding-bottom: @vertical_padding;
 
       .grid_year_title_div{
-        font-size: 120%;
-        font-weight: bold;
+        .header_text;
       }
 
       .grid_thumbs_div{
         display: table;
 
         .grid_thumb_div{
-          @thumb_size: 120px;
-          @image_padding: 5px;
+          @image_padding: 6px;
+          @tiles_per_row: 6;
+          @thumb_size: @content_width / @tiles_per_row - 2 * @image_padding;
           .float_with_padding(@thumb_size, @image_padding);
           padding-top: @image_padding;
           padding-bottom: @image_padding;
@@ -118,6 +158,9 @@ img{
           .grid_thumb_img{
             width: @thumb_size;
             height: @thumb_size;
+            &:hover{
+              opacity: .8;
+            }
           }
         }
       }
@@ -130,29 +173,36 @@ img{
     .detail_nav_img(){
       width: @button_width;
       height: @button_width;
-      .clickable;
+      margin-top: 4px;
     }
 
-    .detail_prev_div{
+    .detail_button_div{
       .float_with_padding(@button_width, @button_padding);
 
       .detail_prev_img{
         .detail_nav_img;
+        .clickable;
       }
-    }
-
-    .detail_next_div{
-      .float_with_padding(@button_width, @button_padding);
 
       .detail_next_img{
         .detail_nav_img;
+        .clickable;
+      }
+
+      .dummy_button{
+        .detail_nav_img;
+        visibility: hidden;
       }
     }
 
-    @image_width: .70 * @content_width;
+    @detail_padding: 10px;
+
+    @image_width: .70 * @content_width - @detail_padding;
 
     .detail_image_div{
       .float_with_padding(@image_width);
+      padding-left: @detail_padding;
+      padding-bottom: @vertical_padding;
 
       .horizontal_detail_image_img{
         width: @image_width;
@@ -164,16 +214,15 @@ img{
     }
 
     .detail_meta_div{
-      @right_padding: 10px;
-      .float_with_padding(@content_width - @image_width - @right_padding);
+      .float_with_padding(@content_width - @image_width - 2 * @detail_padding);
       text-align: right;
-      padding-right: @right_padding;
+      padding-right: @detail_padding;
+      padding-bottom: @vertical_padding;
 
-      @text_padding: 2px;
+      @text_padding: 5px;
 
       .detail_meta_title_div{
-        font-weight: bold;
-        font-size: 120%;
+        .header_text();
         padding: @text_padding;
       }
       .detail_meta_date_div{
@@ -189,34 +238,64 @@ img{
       .detail_meta_blurb_div{
         padding: @text_padding;
         padding-top: 10px;
-        font-size: 90%;
+        font-size: @blurb_size;
       }
     }
 
-    /* page view/template */
-    .page_title_div{
+    /* flat page view/template */
 
+    @page_text_width: .6 * @content_width;
+
+    .page_text_div{
+      .float_with_padding(@page_text_width, @side_padding);
+      @text_padding: 10px;
+      /* Add top padding to center the text */
+      padding-top: 50px;
+      padding-bottom: @vertical_padding;
+
+      .page_title_div{
+        .header_text;
+        padding-bottom: 15px;
+      }
+      .page_content_div{
+        padding-bottom: 5px;
+      }
+      .page_links_div{
+        .link_li{
+          font-size: @blurb_size;
+        }
+      }
     }
-    .page_content_div{
 
-    }
-    .page_links_div{
-      .link_li{
+    .page_image_div{
+      @image_width: @content_width - @page_text_width - 2 * @side_padding;
+      .float_with_padding(@image_width, @side_padding);
+      padding-bottom: @vertical_padding;
 
+      .page_image_img{
+        .float_with_padding(@image_width);
       }
     }
   }
 
-  #banner_bottom_panel{
+  #bar_bottom_panel{
+    .bar_img{
+      width: @page_width;
+    }
   }
 
   #footer_panel{
     .center(@content_width);
-    @navigation_width: .8 * @content_width;
+    @navigation_width: .55 * @content_width;
+    // Set the height for extra space at the bottom
+    height: 60px;
 
     #copyright_panel{
       .float_with_padding(@content_width - @navigation_width);
-      float: right;
+
+      .copyright_img{
+        .float_with_padding(@content_width - @navigation_width);
+      }
     }
 
     #page_navigation_panel{
@@ -229,6 +308,7 @@ img{
         display: table-cell;
         float: right;
         padding-right: 20px;
+        padding-top: 5px;
         .navigation_link;
       }
 

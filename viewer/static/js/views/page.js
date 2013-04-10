@@ -19,6 +19,8 @@ define([
             this.collection = new FlatPageCollection(null, this.options);
             // Set the current page in the singletons object
             Singletons.CurrentPage = this.options.title;
+            // Clear the current type in the singletons object
+            Singletons.CurrentType = null;
             // Bind events to collection's reset event
             this.collection.bind('reset', this.getLinks, this);
             // Call fetch with reset = true to trigger the event

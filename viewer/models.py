@@ -13,11 +13,13 @@ class Piece(models.Model):
     CANVAS = 'Canvas'
     DIGITAL = 'Digital'
     PHOTOGRAPHY = 'Photography'
+    DRAWING = 'Drawing'
     ALBUM_ART = 'Album Art'
     TYPE_CHOICES = (
         (CANVAS, CANVAS),
         (DIGITAL, DIGITAL),
         (PHOTOGRAPHY, PHOTOGRAPHY),
+        (DRAWING, DRAWING),
         (ALBUM_ART, ALBUM_ART),
     )
     type = models.CharField(max_length=20, choices=TYPE_CHOICES, default=CANVAS)
@@ -39,10 +41,12 @@ class Piece(models.Model):
         return super(Piece, self).save(*args, **kwargs)
 
 # Flat page model
-# Represents a page with static content and several links
+# Represents a page with static content, an image, and several links
 class FlatPage(models.Model):
     title = models.CharField(max_length=20)
     content = models.TextField()
+    image = models.ImageField(upload_to='flatpage/')
+    caption = models.TextField(blank=True)
 
     def __unicode__(self):
         return self.title
