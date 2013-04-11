@@ -3,31 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="0cc17ba3-4bd6-40b4-ae89-f37bae701622" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/viewer/static/js/backbone-tastypie.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/static/images/left_arrow.jpg" afterPath="$PROJECT_DIR$/viewer/static/images/left_arrow.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/static/images/left_arrow_highlight.jpg" afterPath="$PROJECT_DIR$/viewer/static/images/left_arrow_highlight.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/static/images/right_arrow.jpg" afterPath="$PROJECT_DIR$/viewer/static/images/right_arrow.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/static/images/right_arrow_highlight.jpg" afterPath="$PROJECT_DIR$/viewer/static/images/right_arrow_highlight.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/sqlite.db" afterPath="$PROJECT_DIR$/database/sqlite.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/static/js/templates/detail.html" afterPath="$PROJECT_DIR$/viewer/static/js/templates/detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/templates/viewer/index.html" afterPath="$PROJECT_DIR$/viewer/templates/viewer/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/models.py" afterPath="$PROJECT_DIR$/viewer/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/static/js/templates/page.html" afterPath="$PROJECT_DIR$/viewer/static/js/templates/page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/static/js/views/page.js" afterPath="$PROJECT_DIR$/viewer/static/js/views/page.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/static/js/models/piece.js" afterPath="$PROJECT_DIR$/viewer/static/js/models/piece.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewer/static/css/style.less" afterPath="$PROJECT_DIR$/viewer/static/css/style.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="portfolio.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/settings.py" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363212089905" ignored="false" />
-    <file path="/Dummy.txt" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1365459692787" ignored="false" />
+    <file path="/Dummy.txt" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1365627121255" ignored="false" />
     <file path="/models.py" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1365551337071" ignored="false" />
     <file path="/urls.py" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1364084978649" ignored="false" />
     <file path="/views.py" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1364074579425" ignored="false" />
     <file path="/api.py" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1364084937604" ignored="false" />
     <file path="/admin.py" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1364083703487" ignored="false" />
-    <file path="/index.html" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1365613887390" ignored="false" />
+    <file path="/index.html" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1365617879010" ignored="false" />
     <file path="/viewer.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363821485887" ignored="false" />
-    <file path="/piece.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1365465440141" ignored="false" />
+    <file path="/piece.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1365627737295" ignored="false" />
     <file path="/pieces.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1364006341988" ignored="false" />
     <file path="/router.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1364088726030" ignored="false" />
     <file path="/main.js" changelist="0cc17ba3-4bd6-40b4-ae89-f37bae701622" time="1363908977357" ignored="false" />
@@ -67,15 +60,8 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viewer/templates/viewer/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="84" selection-start="2152" selection-end="2152" vertical-scroll-proportion="-10.083333">
-              <folding>
-                <marker date="1365613893000" expanded="true" signature="2026:2390" placeholder="..." />
-                <marker date="1365613893000" expanded="true" signature="2267:2371" placeholder="..." />
-                <marker date="1365613893000" expanded="true" signature="2427:2521" placeholder="..." />
-                <marker date="1365613893000" expanded="true" signature="2604:2698" placeholder="..." />
-                <marker date="1365613893000" expanded="true" signature="2734:2965" placeholder="..." />
-                <marker date="1365613893000" expanded="true" signature="2777:2891" placeholder="..." />
-              </folding>
+            <state line="4" column="31" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -83,7 +69,7 @@
       <file leaf-file-name="style.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viewer/static/css/style.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="20" selection-start="1540" selection-end="1540" vertical-scroll-proportion="0.0">
+            <state line="159" column="32" selection-start="3395" selection-end="3395" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -93,9 +79,7 @@
         <entry file="file://$PROJECT_DIR$/viewer/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="43" column="50" selection-start="1423" selection-end="1423" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -109,10 +93,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="router.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="router.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viewer/static/js/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.43769968">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -121,7 +105,7 @@
       <file leaf-file-name="page.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viewer/static/js/templates/page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="48" selection-start="632" selection-end="632" vertical-scroll-proportion="-10.0">
+            <state line="16" column="48" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -131,9 +115,7 @@
         <entry file="file://$PROJECT_DIR$/viewer/api.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -147,13 +129,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="piece.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="piece.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/viewer/static/js/models/piece.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="34" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="10" column="62" selection-start="314" selection-end="314" vertical-scroll-proportion="0.18838304">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -161,7 +141,7 @@
       <file leaf-file-name="detail.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viewer/static/js/templates/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="-0.0">
+            <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -193,22 +173,22 @@
         <option value="$PROJECT_DIR$/viewer/static/js/router.js" />
         <option value="$PROJECT_DIR$/viewer/static/js/views/page_navigation.js" />
         <option value="$PROJECT_DIR$/viewer/static/js/views/grid.js" />
-        <option value="$PROJECT_DIR$/viewer/static/js/models/piece.js" />
         <option value="$PROJECT_DIR$/viewer/static/js/views/detail.js" />
         <option value="$PROJECT_DIR$/viewer/static/js/templates/detail.html" />
         <option value="$PROJECT_DIR$/viewer/models.py" />
         <option value="$PROJECT_DIR$/viewer/static/js/templates/page.html" />
+        <option value="$PROJECT_DIR$/viewer/static/js/views/page.js" />
         <option value="$PROJECT_DIR$/viewer/templates/viewer/index.html" />
         <option value="$PROJECT_DIR$/viewer/static/css/style.less" />
-        <option value="$PROJECT_DIR$/viewer/static/js/views/page.js" />
+        <option value="$PROJECT_DIR$/viewer/static/js/models/piece.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="401" />
-    <option name="y" value="24" />
+    <option name="y" value="22" />
     <option name="width" value="989" />
-    <option name="height" value="808" />
+    <option name="height" value="806" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -504,12 +484,12 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="FullScreen" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -667,14 +647,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="401" y="24" width="989" height="808" extended-state="0" />
+    <frame x="401" y="22" width="989" height="806" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26935312" sideWeight="0.67052025" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2757158" sideWeight="0.67052025" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -752,11 +732,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/viewer/static/js/views/type_navigation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="3" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="3" column="3" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/viewer/static/js/templates/navigation.html">
@@ -766,32 +742,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/viewer/static/js/views/page_navigation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="65" selection-start="1919" selection-end="1919" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="49" column="65" selection-start="1919" selection-end="1919" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/viewer/static/js/views/grid.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="41" selection-start="1579" selection-end="1579" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="36" column="41" selection-start="1579" selection-end="1579" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/viewer/static/js/templates/grid.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewer/static/js/models/piece.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="34" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/viewer/static/js/views/detail.js">
@@ -801,21 +762,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/viewer/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="50" selection-start="1423" selection-end="1423" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/viewer/api.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -828,28 +778,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/viewer/static/js/templates/page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="48" selection-start="632" selection-end="632" vertical-scroll-proportion="-10.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewer/templates/viewer/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="84" selection-start="2152" selection-end="2152" vertical-scroll-proportion="-10.083333">
-          <folding>
-            <marker date="1365613893000" expanded="true" signature="2026:2390" placeholder="..." />
-            <marker date="1365613893000" expanded="true" signature="2267:2371" placeholder="..." />
-            <marker date="1365613893000" expanded="true" signature="2427:2521" placeholder="..." />
-            <marker date="1365613893000" expanded="true" signature="2604:2698" placeholder="..." />
-            <marker date="1365613893000" expanded="true" signature="2734:2965" placeholder="..." />
-            <marker date="1365613893000" expanded="true" signature="2777:2891" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewer/static/css/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="20" selection-start="1540" selection-end="1540" vertical-scroll-proportion="0.0">
+        <state line="16" column="48" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -863,7 +792,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/viewer/static/js/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.43769968">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewer/templates/viewer/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="31" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewer/static/css/style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="159" column="32" selection-start="3395" selection-end="3395" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewer/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="50" selection-start="1423" selection-end="1423" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewer/static/js/models/piece.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="62" selection-start="314" selection-end="314" vertical-scroll-proportion="0.18838304">
           <folding />
         </state>
       </provider>
