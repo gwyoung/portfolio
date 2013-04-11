@@ -219,24 +219,30 @@ img{
       padding-right: @detail_padding;
       padding-bottom: @vertical_padding;
 
-      @text_padding: 5px;
+      @text_padding: 3px;
+      @left_padding: 10px;
+
+      .padded_text(){
+        padding: @text_padding;
+        padding-left: @left_padding;
+      }
 
       .detail_meta_title_div{
-        .header_text();
-        padding: @text_padding;
+        .header_text;
+        .padded_text;
       }
       .detail_meta_date_div{
         font-style: italic;
-        padding: @text_padding;
+        .padded_text;
       }
       .detail_meta_size_div{
-        padding: @text_padding;
+        .padded_text;
       }
       .detail_meta_materials_div{
-        padding: @text_padding;
+        .padded_text;
       }
       .detail_meta_blurb_div{
-        padding: @text_padding;
+        .padded_text;
         padding-top: 10px;
         font-size: @blurb_size;
       }
