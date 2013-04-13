@@ -14,7 +14,7 @@ define([
         initialize: function(data, options){
             this.type = options.type;
             this.year = options.year;
-            this.limit = options.limit;
+            this.limit = options.limit || 0;
             this.offset = options.offset;
         },
 
@@ -26,9 +26,7 @@ define([
         // Constructs parameters for filtering set
         params: function(){
             var p = {};
-            if(this.limit){
-                p.limit = this.limit;
-            }
+            p.limit = this.limit;
             if(this.offset){
                 p.offset = this.offset;
             }
