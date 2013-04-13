@@ -122,10 +122,24 @@ img{
     }
   }
 
+  @bar_padding: 3px;
+
   #bar_top_panel{
     .bar_img{
       width: @page_width;
+      padding-bottom: @bar_padding;
     }
+  }
+
+  /* Define thumbnail sizes */
+  @thumb_padding: 6px;
+  @tiles_per_row: 6;
+  @thumb_size: @content_width / @tiles_per_row - 2 * @thumb_padding;
+
+  /* Makes the grid view scrollable */
+  .scrollable{
+    height: 3.4 * @thumb_size;
+    overflow-y: scroll;
   }
 
   #content_panel{
@@ -145,12 +159,9 @@ img{
         display: table;
 
         .grid_thumb_div{
-          @image_padding: 6px;
-          @tiles_per_row: 6;
-          @thumb_size: @content_width / @tiles_per_row - 2 * @image_padding;
-          .float_with_padding(@thumb_size, @image_padding);
-          padding-top: @image_padding;
-          padding-bottom: @image_padding;
+          .float_with_padding(@thumb_size, @thumb_padding);
+          padding-top: @thumb_padding;
+          padding-bottom: @thumb_padding;
           .clickable;
           &:hover{
             background: @hover_color;
@@ -288,6 +299,7 @@ img{
   #bar_bottom_panel{
     .bar_img{
       width: @page_width;
+      padding-top: @bar_padding;
     }
   }
 

@@ -71,6 +71,10 @@ define([
                 this.setUpEvents(nextClass, Server.Constants.Images.NEXT_HOVER,
                     Server.Constants.Images.NEXT, uriAttr);
             }
+
+
+            // Remove scrollable class
+            $('#content_panel').removeClass(Server.Constants.Classes.Scrollable);
         },
         setUpEvents: function(cssClass, hoverImg, img, uriAttr){
             // Set up click and hover events

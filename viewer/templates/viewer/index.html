@@ -20,6 +20,10 @@
             // Turn autoescape off to avoid automatic encoding of quotes
             Server.Constants.WORK_TYPES = ["{% autoescape off %}{{ types }}{% endautoescape %}"];
 
+            // Special classes
+            Server.Constants.Classes = Server.Constants.Classes || {};
+            Server.Constants.Classes.Scrollable = 'scrollable';
+
             // Image constants
             Server.Constants.Images = Server.Constants.Images || {};
             Server.Constants.Images.PREVIOUS = "{{ STATIC_URL }}images/left_arrow.jpg";

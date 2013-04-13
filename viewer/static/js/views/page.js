@@ -40,6 +40,9 @@ define([
             // Compile the template and render the content div
             var links = this.linkCollection.models;
             this.$el.html(_.template(PageTemplate, {page: this.flat_page, links: links}));
+
+            // Remove scrollable class
+            $('#content_panel').removeClass(Server.Constants.Classes.Scrollable);
         }
     })
 

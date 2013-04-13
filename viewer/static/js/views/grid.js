@@ -55,6 +55,9 @@ define([
                 var uri = $(this).attr(uri_attr);
                 Singletons.Router.navigate('work/detail/' + uri, true);
             });
+
+            // Toggle scrollable class
+            $('#content_panel').addClass(Server.Constants.Classes.Scrollable);
         }
     });
 
