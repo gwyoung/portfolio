@@ -47,10 +47,10 @@ define([
                 nextPiece = models[index + 1];
             }
 
-            // Format the date
+            // Format the date - add time to ensure the date is correct
             var date = new Date(this.model.get('created_date'));
-            var formatted_date = date.getMonthName() + ' ' + date.getDateOrdinal() + ', '
-                + date.getFullYear();
+            var formatted_date = date.getUTCMonthName() + ' ' + date.getUTCDateOrdinal() + ', '
+                + date.getUTCFullYear();
 
             // Compile the template and render the content div
             var prevClass = 'detail_prev_img';
