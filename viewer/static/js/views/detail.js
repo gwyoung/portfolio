@@ -48,7 +48,7 @@ define([
             }
 
             // Format the date - add time to ensure the date is correct
-            var date = new Date(this.model.get('created_date'));
+            var date = new Date(this.model.get('created_date').split("-").join("/"));
             var formatted_date = date.getUTCMonthName() + ' ' + date.getUTCDateOrdinal() + ', '
                 + date.getUTCFullYear();
 

@@ -43,7 +43,7 @@ define([
         parse: function(response){
             // Translate year from creation date
             _.each(response.objects, function(piece){
-                piece.year = new Date(piece.created_date).getUTCFullYear();
+                piece.year = new Date(piece.created_date.split("-").join("/")).getUTCFullYear();
             });
             // Sort the objects
             var sorted_objects = _.sortBy(response.objects, 'created_date');
