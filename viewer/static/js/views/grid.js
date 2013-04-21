@@ -36,7 +36,7 @@ define([
             var years = _.uniq(_.map(models, function(piece){ return piece.get('year'); }));
             _.each(years, function(year){
                 var pieces = _.filter(models, function(piece){
-                    return piece.get('year') == year;
+                    return piece.get('year') === year;
                 });
                 piece_sets.push({year: year, pieces: pieces});
             });

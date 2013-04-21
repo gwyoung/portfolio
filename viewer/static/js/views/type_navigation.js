@@ -42,7 +42,7 @@ define([
             // Mark the currently selected tab
             var selected_class = 'selected_link_div';
             this.$el.children('.' + link_class).each(function (){
-                if($(this).html() == Singletons.CurrentType){
+                if($(this).html() === Singletons.CurrentType){
                     $(this).addClass(selected_class);
                 }
             });

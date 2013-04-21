@@ -48,7 +48,7 @@ define([
             // Mark the current page
             var selected_class = 'selected_link_div';
             this.$el.children('.' + link_class).each(function (){
-                if($(this).html() == Singletons.CurrentPage){
+                if($(this).html() === Singletons.CurrentPage){
                     $(this).addClass(selected_class);
                 }
             });

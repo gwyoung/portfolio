@@ -36,7 +36,7 @@ define([
             var models = Singletons.CurrentCollection.models;
             var piece = this.model;
             var index = _.indexOf(models, _.find(models, function(item){
-                    return item.get('id') == piece.get('id');
+                    return item.get('id') === piece.get('id');
                 }));
             var prevPiece;
             var nextPiece;
