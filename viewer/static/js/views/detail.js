@@ -72,7 +72,6 @@ define([
                     Server.Constants.Images.NEXT, uriAttr);
             }
 
-
             // Remove scrollable class
             $('#content_panel').removeClass(Server.Constants.Classes.Scrollable);
         },

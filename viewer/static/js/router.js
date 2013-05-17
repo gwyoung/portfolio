@@ -9,6 +9,7 @@ define([
     'views/page_navigation'
 ], function($, _, Backbone, GridView, DetailView, TypeNavigationView, PageView, PageNavigationView){
 
+    // Creates router
     var Router = Backbone.Router.extend({
         routes: {
             // Define some URL routes
@@ -23,11 +24,24 @@ define([
             '*actions': 'showGrid'
         },
         initialize: function(){
+            // Overrides the navigate function to show loading before navigation
+            // Wrap in an immediately executed function to avoid confusion between old
+            // function and new function
+            this.navigate = (function(old, router){
+                return function() {
+                   router.showLoading();
+                   old.apply(router, arguments);
+                }
+            })(this.navigate, this);
+
+            // Start the history to enable the browser forward and back buttons
             Backbone.history.start();
         },
         renderControls: function(){
             var typeNavigationView = new TypeNavigationView();
             var pageNavigationView = new PageNavigationView();
+            // Hide loading once everything is done
+            this.hideLoading();
         },
         showGrid: function(){
             var gridView = new GridView();
@@ -48,6 +62,12 @@ define([
         showInformation: function(title){
             var pageView = new PageView({title: decodeURIComponent(title)});
             this.renderControls();
+        },
+        showLoading: function(){
+            $('*').toggleClass(Server.Constants.Classes.Loading, true);
+        },
+        hideLoading: function(){
+            $('*').toggleClass(Server.Constants.Classes.Loading, false);
         }
     });
 
